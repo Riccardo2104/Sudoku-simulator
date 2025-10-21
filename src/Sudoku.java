@@ -2,35 +2,56 @@ import java.util.Arrays;
 public class Sudoku {
     //TODO implementare generazione griglia
     // non so come si chiama penso campi
-    private int[][] arr  ;
-    private  int lunghezza = 9;
-    private  int larghezza = 9;
+    int[][] arr ;
+    int n;
+    int m;
+    int it;
+
+
+
 
     public Sudoku() {
-        arr = new int[lunghezza][lunghezza];
-        for (int[] r : arr)
-            Arrays.fill(r, 0);
+        n = 9;
+        m = 9;
+        it = 1;
 
+        // array dichiarato
+        arr = new int[9][9];
+
+        // do i valory al array
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                arr[i][j] = it;
+                it++;
+            }
+        }
 
     }
 
-    // arralist numeri da uno 1 a 9
-
-   /*
-    ArrayList<Integer> numeri = new ArrayList<Integer>(); // Create an ArrayList object
+    @Override
+    public String toString() {
 
 
+//        for (int row = 0; row < arr.length; row++) {
+//            for (int col = 0; col < arr[row].length; col++) {
+//                 System.out.println(Arrays.deepToString(newArray));
+//            }
+//        }
+        return Arrays.deepToString(arr);
 
-    for (int i = 0; i==numeri; i++) {
-        System.out.println(i);
     }
+//    @Override public String toString() {
+//
+//        return Arrays.toString(arr);
+//
+//
+//
+//    }
 
-*/
 
-
-    public static void main(String[] args) {
+     static void main(String[] args) {
         Sudoku primo = new Sudoku();
-        System.out.print(primo);
+        System.out.print(primo.toString());
 
     }
     /*
