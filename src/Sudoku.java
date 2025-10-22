@@ -8,8 +8,6 @@ public class Sudoku {
     int it;
 
 
-
-
     public Sudoku() {
         n = 9;
         m = 9;
@@ -28,30 +26,27 @@ public class Sudoku {
 
     }
 
+    public int getlenght() {
+        return n;
+    }
+
+    public int getwidth(){
+        return m;
+    }
+
+
+
     @Override
     public String toString() {
-
-
-//        for (int row = 0; row < arr.length; row++) {
-//            for (int col = 0; col < arr[row].length; col++) {
-//                 System.out.println(Arrays.deepToString(newArray));
-//            }
-//        }
-        return Arrays.deepToString(arr);
-
+        return Arrays.deepToString(arr).replace("], [", "],\n [");
     }
-//    @Override public String toString() {
-//
-//        return Arrays.toString(arr);
-//
-//
-//
-//    }
 
 
      static void main(String[] args) {
         Sudoku primo = new Sudoku();
         System.out.print(primo.toString());
+
+
 
     }
     /*
